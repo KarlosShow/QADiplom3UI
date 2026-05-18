@@ -1,0 +1,1 @@
+# QADiplom3UI
