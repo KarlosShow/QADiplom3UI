@@ -25,9 +25,9 @@ class TestBurgerConstructor:
         main_page.open(BASE_URL)
         main_page.open_ingredient_modal()
         main_page.close_ingredient_modal()
-        assert not main_page.element_is_displayed(
+        assert main_page.element_is_not_visible(
             MainPageLocators.INGREDIENT_MODAL
-        )
+)
 
     @allure.title('Ingredient can be added into constructor')
     def test_add_ingredient_to_constructor(

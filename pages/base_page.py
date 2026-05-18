@@ -1,6 +1,7 @@
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import TimeoutException
 
 class BasePage:
     def __init__(self, driver, timeout=10):
@@ -39,3 +40,10 @@ class BasePage:
         ActionChains(self.driver) \
             .drag_and_drop(source, target) \
             .perform()
+    def element_is_not_visible(self, locator):
+        try:
+            return self.wait.until(
+            EC.invisibility_of_element_located(locator)
+            )
+        except TimeoutException:
+            return False

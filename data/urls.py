@@ -1,4 +1,4 @@
-BASE_URL = 'https://stellarburgers.nomoreparties.site'
+BASE_URL = 'https://stellarburgers.education-services.ru'
 
 LOGIN_PAGE_URL = f'{BASE_URL}/login'
 REGISTER_PAGE_URL = f'{BASE_URL}/register'
